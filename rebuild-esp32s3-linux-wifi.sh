@@ -10,7 +10,8 @@
 # keep_etc=y		-- don't overwrite the /etc partition
 #
 
-SET_BAUDRATE='-b 2000000'
+#SET_BAUDRATE='-b 2000000'
+SET_BAUDRATE=''
 
 CTNG_VER=xtensa-fdpic
 CTNG_CONFIG=xtensa-esp32s3-linux-uclibcfdpic

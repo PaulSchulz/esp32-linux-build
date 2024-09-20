@@ -1,3 +1,5 @@
 Install the following packages (Debian 12) before running the build scripts:
 
 autoconf automake bash bc bison build-essential cmake flex gawk git gperf help2man libncurses-dev libtool libtool-bin libusb-1.0-0 python3 python3-venv rsync texinfo unzip wget
+./rebuild-esp32s3-linux-wifi.sh
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 2000000 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 network_adapter.bin 0x8000 partition_table/partition-table.bin
